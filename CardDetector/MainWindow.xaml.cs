@@ -1,0 +1,187 @@
+﻿using CsvHelper;
+using OpenCvSharp.WpfExtensions;
+using System.IO;
+
+namespace CardDetector.CardDetector
+{
+    enum CardLocation
+    {
+        TopLeft,
+        TopMiddle,
+        TopRight,
+        BottomLeft,
+        BottomRight
+    }
+
+    enum Pack
+    {
+        Mewtwo,
+        Dracaufeu,
+        Pikachu,
+        Mew,
+        Dialga,
+        Palkia,
+        Arceus
+    }
+
+    class CardTemplate
+    {
+        public Pack pack { get; private set; }
+
+        public string ID { get; private set; } = "";
+
+        public OpenCvSharp.Mat template { get; private set; } = new();
+
+        public string informationToDisplay = "";
+
+        public CardTemplate(Pack pack, string ID, OpenCvSharp.Mat template)
+        {
+            this.pack = pack;
+            this.ID = ID;
+            this.template = template;
+        }
+    };
+
+
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : System.Windows.Window
+    {
+        private static OpenCvSharp.Rect GetRect(CardLocation cardLocation)
+        {
+            int width = 367;
+            int height = 512;
+            int padding = 20;
+            int shift = 193;
+
+            switch (cardLocation)
+            {
+                case CardLocation.TopLeft:
+                    return new(0, 0, width, height);
+                case CardLocation.TopMiddle:
+                    return new(width + padding, 0, width, height);
+                case CardLocation.TopRight:
+                    return new(width * 2 + padding * 2, 0, width, height);
+                case CardLocation.BottomLeft:
+                    return new(shift, height + padding, width, height);
+                case CardLocation.BottomRight:
+                    return new(shift + width + padding, height + padding, width, height);
+            }
+            throw new Exception("Invalid card ID");
+        }
+
+        private static OpenCvSharp.Mat Extract(OpenCvSharp.Mat input, CardLocation cardLocation)
+        {
+
+            return new OpenCvSharp.Mat(input, GetRect(cardLocation));
+        }
+
+        private static List<CardTemplate> LoadTemplates()
+        {
+            List<CardTemplate> templates = new();
+            foreach (Pack pack in Enum.GetValues(typeof(Pack)))
+            {
+                string[] filenames = Directory.GetFiles($"data/{pack}", "*.webp", SearchOption.AllDirectories);
+                foreach (string filename in filenames)
+                {
+                    CardTemplate template = new(pack, Path.GetFileNameWithoutExtension(filename), OpenCvSharp.Cv2.ImRead(filename));
+                    templates.Add(template);
+                }
+            }
+            return templates;
+        }
+
+        private static void LoadCsv(List<CardTemplate> templates)
+        {
+            string[] filenames = Directory.GetFiles($"config", "*.csv", SearchOption.AllDirectories);
+            var config = new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.InvariantCulture);
+            foreach (string filename in filenames)
+            {
+                using (var reader = new StreamReader(filename))
+                using (var csv = new CsvReader(reader, config))
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        csv.Read();
+                    }
+
+                    csv.ReadHeader();
+
+                    while (csv.Read())
+                    {
+                        string? cardID = csv.GetField("Card ID");
+                        string? copies = csv.GetField("Copies");
+                        if (cardID == null || copies == null)
+                        {
+                            throw new Exception($"Invalid csv : {filename}");
+                        }
+
+                        foreach (CardTemplate template in templates)
+                        {
+                            if (template.ID == cardID)
+                            {
+                                template.informationToDisplay = copies;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ReadGP(List<CardTemplate> templates)
+        {
+            OpenCvSharp.Mat input = OpenCvSharp.Cv2.ImRead("data/cards.png");
+            InputImage.Source = input.ToBitmapSource();
+
+            foreach (CardLocation cardLocation in Enum.GetValues(typeof(CardLocation)))
+            {
+                OpenCvSharp.Mat card = Extract(input, cardLocation);
+                //card.SaveImage($"{id.ToString()}.png");
+
+                foreach (CardTemplate template in templates)
+                {
+                    OpenCvSharp.Mat result = card.MatchTemplate(template.template, OpenCvSharp.TemplateMatchModes.CCoeffNormed);
+                    OpenCvSharp.Cv2.MinMaxLoc(result, out _, out double maxVal, out _, out OpenCvSharp.Point maxLoc);
+
+                    if (maxVal > 0.9)
+                    {
+                        switch (cardLocation)
+                        {
+                            case CardLocation.TopLeft:
+                                TopLeftText.Text = template.informationToDisplay;
+                                TopLeftImage.Source = template.template.ToBitmapSource();
+                                break;
+                            case CardLocation.TopMiddle:
+                                TopMiddleText.Text = template.informationToDisplay;
+                                TopMiddleImage.Source = template.template.ToBitmapSource();
+                                break;
+                            case CardLocation.TopRight:
+                                TopRightText.Text = template.informationToDisplay;
+                                TopRightImage.Source = template.template.ToBitmapSource();
+                                break;
+                            case CardLocation.BottomLeft:
+                                BottomLeftText.Text = template.informationToDisplay;
+                                BottomLeftImage.Source = template.template.ToBitmapSource();
+                                break;
+                            case CardLocation.BottomRight:
+                                BottomRightText.Text = template.informationToDisplay;
+                                BottomRightImage.Source = template.template.ToBitmapSource();
+                                break;
+                        }
+                        continue;
+                    }
+                }
+            }
+        }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            List<CardTemplate> templates = LoadTemplates();
+            LoadCsv(templates);
+            ReadGP(templates);
+        }
+    }
+}

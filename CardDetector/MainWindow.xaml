@@ -1,0 +1,36 @@
+﻿<Window x:Class="CardDetector.CardDetector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel>
+            <Image x:Name="InputImage" Width="367" Height="512"/>
+
+            <StackPanel x:Name="Output" Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="TopLeftText"/>
+                    <Image x:Name="TopLeftImage" Width="367" Height="512"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="TopMiddleText"/>
+                    <Image x:Name="TopMiddleImage" Width="367" Height="512"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="TopRightText"/>
+                    <Image x:Name="TopRightImage" Width="367" Height="512"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="BottomLeftText"/>
+                    <Image x:Name="BottomLeftImage" Width="367" Height="512"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="BottomRightText"/>
+                    <Image x:Name="BottomRightImage" Width="367" Height="512"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
