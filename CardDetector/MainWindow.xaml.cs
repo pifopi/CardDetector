@@ -48,6 +48,34 @@ namespace CardDetector.CardDetector
     /// </summary>
     public partial class MainWindow : System.Windows.Window
     {
+        private List<CardTemplate> templates = new();
+
+        [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
+        [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
+        private static extern bool AddClipboardFormatListener(IntPtr hwnd);
+
+        private void MainWindow_SourceInitialized(object sender, EventArgs e)
+        {
+            IntPtr handle = (new System.Windows.Interop.WindowInteropHelper(this)).Handle;
+            System.Windows.Interop.HwndSource.FromHwnd(handle)?.AddHook(WndProc);
+            AddClipboardFormatListener(handle);
+        }
+
+        private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            int WM_CLIPBOARDUPDATE = 0x031D;
+
+            if (msg == WM_CLIPBOARDUPDATE)
+            {
+                if (System.Windows.Clipboard.ContainsImage())
+                {
+                    ReadGP();
+                }
+            }
+            return IntPtr.Zero;
+        }
+
+
         private static OpenCvSharp.Rect GetRect(CardLocation cardLocation)
         {
             int width = 367;
@@ -73,13 +101,23 @@ namespace CardDetector.CardDetector
 
         private static OpenCvSharp.Mat Extract(OpenCvSharp.Mat input, CardLocation cardLocation)
         {
-
             return new OpenCvSharp.Mat(input, GetRect(cardLocation));
         }
 
-        private static List<CardTemplate> LoadTemplates()
+        private static OpenCvSharp.Mat ClipboardToMat()
         {
-            List<CardTemplate> templates = new();
+            using (MemoryStream stream = new MemoryStream())
+            {
+                System.Windows.Media.Imaging.BitmapEncoder encoder = new System.Windows.Media.Imaging.BmpBitmapEncoder();
+                encoder.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(System.Windows.Clipboard.GetImage()));
+                encoder.Save(stream);
+                System.Drawing.Bitmap bitmap = new(stream);
+                return OpenCvSharp.Extensions.BitmapConverter.ToMat(bitmap);
+            }
+        }
+
+        private void LoadTemplates()
+        {
             foreach (Pack pack in Enum.GetValues(typeof(Pack)))
             {
                 string[] filenames = Directory.GetFiles($"data/{pack}", "*.webp", SearchOption.AllDirectories);
@@ -89,10 +127,9 @@ namespace CardDetector.CardDetector
                     templates.Add(template);
                 }
             }
-            return templates;
         }
 
-        private static void LoadCsv(List<CardTemplate> templates)
+        private void LoadCsv()
         {
             string[] filenames = Directory.GetFiles($"config", "*.csv", SearchOption.AllDirectories);
             var config = new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.InvariantCulture);
@@ -129,9 +166,9 @@ namespace CardDetector.CardDetector
             }
         }
 
-        private void ReadGP(List<CardTemplate> templates)
+        private void ReadGP()
         {
-            OpenCvSharp.Mat input = OpenCvSharp.Cv2.ImRead("data/cards.png");
+            OpenCvSharp.Mat input = ClipboardToMat();
             InputImage.Source = input.ToBitmapSource();
 
             foreach (CardLocation cardLocation in Enum.GetValues(typeof(CardLocation)))
@@ -178,10 +215,10 @@ namespace CardDetector.CardDetector
         public MainWindow()
         {
             InitializeComponent();
+            SourceInitialized += MainWindow_SourceInitialized;
 
-            List<CardTemplate> templates = LoadTemplates();
-            LoadCsv(templates);
-            ReadGP(templates);
+            LoadTemplates();
+            LoadCsv();
         }
     }
 }
