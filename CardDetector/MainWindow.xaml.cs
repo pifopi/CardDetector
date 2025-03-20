@@ -1,5 +1,4 @@
-﻿using CsvHelper;
-using OpenCvSharp.WpfExtensions;
+﻿using OpenCvSharp.WpfExtensions;
 using System.IO;
 
 namespace CardDetector.CardDetector
@@ -13,32 +12,21 @@ namespace CardDetector.CardDetector
         BottomRight
     }
 
-    enum Pack
-    {
-        Mewtwo,
-        Dracaufeu,
-        Pikachu,
-        Mew,
-        Dialga,
-        Palkia,
-        Arceus
-    }
-
     class CardTemplate
     {
-        public Pack pack { get; private set; }
-
         public string ID { get; private set; } = "";
 
-        public OpenCvSharp.Mat template { get; private set; } = new();
+        public OpenCvSharp.Mat image { get; private set; } = new();
+
+        public OpenCvSharp.Mat descriptors { get; private set; } = new();
 
         public string informationToDisplay = "";
 
-        public CardTemplate(Pack pack, string ID, OpenCvSharp.Mat template)
+        public CardTemplate(string ID, OpenCvSharp.Mat image, OpenCvSharp.Mat descriptors)
         {
-            this.pack = pack;
             this.ID = ID;
-            this.template = template;
+            this.image = image;
+            this.descriptors = descriptors;
         }
     };
 
@@ -49,6 +37,8 @@ namespace CardDetector.CardDetector
     public partial class MainWindow : System.Windows.Window
     {
         private List<CardTemplate> templates = new();
+        
+        private OpenCvSharp.ORB orb = OpenCvSharp.ORB.Create();
 
         [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
         [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
@@ -118,14 +108,14 @@ namespace CardDetector.CardDetector
 
         private void LoadTemplates()
         {
-            foreach (Pack pack in Enum.GetValues(typeof(Pack)))
+            string[] filenames = Directory.GetFiles($"data", "*.webp", SearchOption.AllDirectories);
+            foreach (string filename in filenames)
             {
-                string[] filenames = Directory.GetFiles($"data/{pack}", "*.webp", SearchOption.AllDirectories);
-                foreach (string filename in filenames)
-                {
-                    CardTemplate template = new(pack, Path.GetFileNameWithoutExtension(filename), OpenCvSharp.Cv2.ImRead(filename));
-                    templates.Add(template);
-                }
+                OpenCvSharp.Mat image = OpenCvSharp.Cv2.ImRead(filename);
+                OpenCvSharp.Mat descriptors = new();
+                orb.DetectAndCompute(image, null, out OpenCvSharp.KeyPoint[] _, descriptors);
+
+                templates.Add(new(Path.GetFileNameWithoutExtension(filename), image, descriptors));
             }
         }
 
@@ -136,7 +126,7 @@ namespace CardDetector.CardDetector
             foreach (string filename in filenames)
             {
                 using (var reader = new StreamReader(filename))
-                using (var csv = new CsvReader(reader, config))
+                using (var csv = new CsvHelper.CsvReader(reader, config))
                 {
                     for (int i = 0; i < 5; i++)
                     {
@@ -177,38 +167,48 @@ namespace CardDetector.CardDetector
                 OpenCvSharp.Mat card = Extract(input, cardLocation);
                 //card.SaveImage($"{id.ToString()}.png");
 
+                OpenCvSharp.Mat descriptors = new();
+                orb.DetectAndCompute(card, null, out OpenCvSharp.KeyPoint[] _, descriptors);
+
+                int bestMatchCount = 0;
+                CardTemplate bestMatch = templates[0];
+
                 foreach (CardTemplate template in templates)
                 {
-                    OpenCvSharp.Mat result = card.MatchTemplate(template.template, OpenCvSharp.TemplateMatchModes.CCoeffNormed);
-                    OpenCvSharp.Cv2.MinMaxLoc(result, out _, out double maxVal, out _, out OpenCvSharp.Point maxLoc);
+                    OpenCvSharp.BFMatcher matcher = new(OpenCvSharp.NormTypes.Hamming);
+                    OpenCvSharp.DMatch[] matches = matcher.Match(descriptors, template.descriptors);
 
-                    if (maxVal > 0.9)
+                    int goodMatches = matches.Count(m => m.Distance < 32);
+
+                    if (goodMatches > bestMatchCount)
                     {
-                        switch (cardLocation)
-                        {
-                            case CardLocation.TopLeft:
-                                TopLeftText.Text = template.informationToDisplay;
-                                TopLeftImage.Source = template.template.ToBitmapSource();
-                                break;
-                            case CardLocation.TopMiddle:
-                                TopMiddleText.Text = template.informationToDisplay;
-                                TopMiddleImage.Source = template.template.ToBitmapSource();
-                                break;
-                            case CardLocation.TopRight:
-                                TopRightText.Text = template.informationToDisplay;
-                                TopRightImage.Source = template.template.ToBitmapSource();
-                                break;
-                            case CardLocation.BottomLeft:
-                                BottomLeftText.Text = template.informationToDisplay;
-                                BottomLeftImage.Source = template.template.ToBitmapSource();
-                                break;
-                            case CardLocation.BottomRight:
-                                BottomRightText.Text = template.informationToDisplay;
-                                BottomRightImage.Source = template.template.ToBitmapSource();
-                                break;
-                        }
-                        break;
+                        bestMatchCount = goodMatches;
+                        bestMatch = template;
                     }
+                }
+
+                switch (cardLocation)
+                {
+                    case CardLocation.TopLeft:
+                        TopLeftText.Text = bestMatch.informationToDisplay;
+                        TopLeftImage.Source = bestMatch.image.ToBitmapSource();
+                        break;
+                    case CardLocation.TopMiddle:
+                        TopMiddleText.Text = bestMatch.informationToDisplay;
+                        TopMiddleImage.Source = bestMatch.image.ToBitmapSource();
+                        break;
+                    case CardLocation.TopRight:
+                        TopRightText.Text = bestMatch.informationToDisplay;
+                        TopRightImage.Source = bestMatch.image.ToBitmapSource();
+                        break;
+                    case CardLocation.BottomLeft:
+                        BottomLeftText.Text = bestMatch.informationToDisplay;
+                        BottomLeftImage.Source = bestMatch.image.ToBitmapSource();
+                        break;
+                    case CardLocation.BottomRight:
+                        BottomRightText.Text = bestMatch.informationToDisplay;
+                        BottomRightImage.Source = bestMatch.image.ToBitmapSource();
+                        break;
                 }
             }
         }
