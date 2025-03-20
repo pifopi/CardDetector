@@ -159,6 +159,7 @@ namespace CardDetector.CardDetector
                             if (template.ID == cardID)
                             {
                                 template.informationToDisplay = copies;
+                                break;
                             }
                         }
                     }
@@ -206,7 +207,7 @@ namespace CardDetector.CardDetector
                                 BottomRightImage.Source = template.template.ToBitmapSource();
                                 break;
                         }
-                        continue;
+                        break;
                     }
                 }
             }
