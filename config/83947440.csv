@@ -1,5 +1,5 @@
-🃏,88 / 96,,,,,⬆️,,,
-💠,72 / 75,,,,,Show/hide card pull rates,,,
+🃏,89 / 96,,,,,⬆️,,,
+💠,73 / 75,,,,,Show/hide card pull rates,,,
 ⭐,15 / 20,,,,,,Any A1a,,
 👑,1 / 1,,,,,,Arceus,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card
@@ -71,7 +71,7 @@ TRUE,A2a 065,Noctowl,Noarfang,Arceus,💠💠,3,,3.462%,2.308%
 TRUE,A2a 066,Starly,Étourmi,Arceus,💠,8,3.226%,,
 TRUE,A2a 067,Staravia,Étourvol,Arceus,💠,12,3.226%,,
 TRUE,A2a 068,Staraptor,Étouraptor,Arceus,💠💠,7,,3.462%,2.308%
-FALSE,A2a 069,Shaymin,Shaymin,Arceus,💠💠💠,0,,0.385%,1.538%
+TRUE,A2a 069,Shaymin,Shaymin,Arceus,💠💠💠,1,,0.385%,1.538%
 TRUE,A2a 070,Arceus,Arceus,Arceus,💠💠💠,2,,0.385%,1.538%
 TRUE,A2a 071,Arceus ex,Arceus ex,Arceus,💠💠💠💠,2,,0.333%,1.333%
 TRUE,A2a 072,Irida,Nacchara ,Arceus,💠💠,7,,3.462%,2.308%
