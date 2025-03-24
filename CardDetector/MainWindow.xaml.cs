@@ -30,15 +30,13 @@ namespace CardDetector.CardDetector
         }
     };
 
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : System.Windows.Window
     {
-        private List<CardTemplate> templates = new();
-        
-        private OpenCvSharp.ORB orb = OpenCvSharp.ORB.Create();
+        private readonly List<CardTemplate> templates = new();
+        private readonly OpenCvSharp.ORB orb = OpenCvSharp.ORB.Create();
 
         [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
         [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
@@ -53,40 +51,31 @@ namespace CardDetector.CardDetector
 
         private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
-            int WM_CLIPBOARDUPDATE = 0x031D;
+            const int WM_CLIPBOARDUPDATE = 0x031D;
 
-            if (msg == WM_CLIPBOARDUPDATE)
+            if (msg == WM_CLIPBOARDUPDATE && System.Windows.Clipboard.ContainsImage())
             {
-                if (System.Windows.Clipboard.ContainsImage())
-                {
-                    ReadGP();
-                }
+                ReadGP();
             }
             return IntPtr.Zero;
         }
 
-
         private static OpenCvSharp.Rect GetRect(CardLocation cardLocation)
         {
-            int width = 367;
-            int height = 512;
-            int padding = 20;
-            int shift = 193;
+            const int width = 367;
+            const int height = 512;
+            const int padding = 20;
+            const int shift = 193;
 
-            switch (cardLocation)
+            return cardLocation switch
             {
-                case CardLocation.TopLeft:
-                    return new(0, 0, width, height);
-                case CardLocation.TopMiddle:
-                    return new(width + padding, 0, width, height);
-                case CardLocation.TopRight:
-                    return new(width * 2 + padding * 2, 0, width, height);
-                case CardLocation.BottomLeft:
-                    return new(shift, height + padding, width, height);
-                case CardLocation.BottomRight:
-                    return new(shift + width + padding, height + padding, width, height);
-            }
-            throw new Exception("Invalid card ID");
+                CardLocation.TopLeft => new(0, 0, width, height),
+                CardLocation.TopMiddle => new(width + padding, 0, width, height),
+                CardLocation.TopRight => new(width * 2 + padding * 2, 0, width, height),
+                CardLocation.BottomLeft => new(shift, height + padding, width, height),
+                CardLocation.BottomRight => new(shift + width + padding, height + padding, width, height),
+                _ => throw new ArgumentException("Invalid card location", nameof(cardLocation)),
+            };
         }
 
         private static OpenCvSharp.Mat Extract(OpenCvSharp.Mat input, CardLocation cardLocation)
@@ -96,24 +85,22 @@ namespace CardDetector.CardDetector
 
         private static OpenCvSharp.Mat ClipboardToMat()
         {
-            using (MemoryStream stream = new MemoryStream())
-            {
-                System.Windows.Media.Imaging.BitmapEncoder encoder = new System.Windows.Media.Imaging.BmpBitmapEncoder();
-                encoder.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(System.Windows.Clipboard.GetImage()));
-                encoder.Save(stream);
-                System.Drawing.Bitmap bitmap = new(stream);
-                return OpenCvSharp.Extensions.BitmapConverter.ToMat(bitmap);
-            }
+            using MemoryStream stream = new();
+            System.Windows.Media.Imaging.BitmapEncoder encoder = new System.Windows.Media.Imaging.BmpBitmapEncoder();
+            encoder.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(System.Windows.Clipboard.GetImage()));
+            encoder.Save(stream);
+            using System.Drawing.Bitmap bitmap = new(stream);
+            return OpenCvSharp.Extensions.BitmapConverter.ToMat(bitmap);
         }
 
         private void LoadTemplates()
         {
-            string[] filenames = Directory.GetFiles($"data", "*.webp", SearchOption.AllDirectories);
+            string[] filenames = Directory.GetFiles("data", "*.webp", SearchOption.AllDirectories);
             foreach (string filename in filenames)
             {
                 OpenCvSharp.Mat image = OpenCvSharp.Cv2.ImRead(filename);
                 OpenCvSharp.Mat descriptors = new();
-                orb.DetectAndCompute(image, null, out OpenCvSharp.KeyPoint[] _, descriptors);
+                orb.DetectAndCompute(image, null, out _, descriptors);
 
                 templates.Add(new(Path.GetFileNameWithoutExtension(filename), image, descriptors));
             }
@@ -121,36 +108,35 @@ namespace CardDetector.CardDetector
 
         private void LoadCsv()
         {
-            string[] filenames = Directory.GetFiles($"config", "*.csv", SearchOption.AllDirectories);
+            string[] filenames = Directory.GetFiles("config", "*.csv", SearchOption.AllDirectories);
             var config = new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.InvariantCulture);
             foreach (string filename in filenames)
             {
-                using (var reader = new StreamReader(filename))
-                using (var csv = new CsvHelper.CsvReader(reader, config))
+                using var reader = new StreamReader(filename);
+                using var csv = new CsvHelper.CsvReader(reader, config);
+
+                for (int i = 0; i < 5; i++)
                 {
-                    for (int i = 0; i < 5; i++)
+                    csv.Read();
+                }
+
+                csv.ReadHeader();
+
+                while (csv.Read())
+                {
+                    string? cardID = csv.GetField("Card ID");
+                    string? copies = csv.GetField("Copies");
+                    if (cardID == null || copies == null)
                     {
-                        csv.Read();
+                        throw new Exception($"Invalid csv: {filename}");
                     }
 
-                    csv.ReadHeader();
-
-                    while (csv.Read())
+                    foreach (CardTemplate template in templates)
                     {
-                        string? cardID = csv.GetField("Card ID");
-                        string? copies = csv.GetField("Copies");
-                        if (cardID == null || copies == null)
+                        if (template.ID == cardID)
                         {
-                            throw new Exception($"Invalid csv : {filename}");
-                        }
-
-                        foreach (CardTemplate template in templates)
-                        {
-                            if (template.ID == cardID)
-                            {
-                                template.informationToDisplay = copies;
-                                break;
-                            }
+                            template.informationToDisplay = copies;
+                            break;
                         }
                     }
                 }
@@ -165,10 +151,9 @@ namespace CardDetector.CardDetector
             foreach (CardLocation cardLocation in Enum.GetValues(typeof(CardLocation)))
             {
                 OpenCvSharp.Mat card = Extract(input, cardLocation);
-                //card.SaveImage($"{id.ToString()}.png");
 
                 OpenCvSharp.Mat descriptors = new();
-                orb.DetectAndCompute(card, null, out OpenCvSharp.KeyPoint[] _, descriptors);
+                orb.DetectAndCompute(card, null, out _, descriptors);
 
                 int bestMatchCount = 0;
                 CardTemplate bestMatch = templates[0];
