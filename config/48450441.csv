@@ -1,6 +1,6 @@
-🃏,182 / 207,,,,,⬆️,,,,,,
+🃏,183 / 207,,,,,⬆️,,,,,,
 💠,146 / 155,,,,,Show/hide card pull rates,,,,,,
-⭐,36 / 50,,,,,,Any A2,,,,,
+⭐,37 / 50,,,,,,Any A2,,,,,
 👑,0 / 2,,,,,,Dialga,,,Palkia,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card
 TRUE,A2 001,Oddish,Mystherbe,Any A2,💠,7,2.174%,,,2.273%,,
@@ -198,7 +198,7 @@ TRUE,A2 192,Cynthia,Cynthia,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 TRUE,A2 193,Volkner,Tanguy,Dialga,⭐⭐,1,,0.042%,0.167%,,,
 TRUE,A2 194,Dawn,Aurore,Dialga,⭐⭐,1,,0.042%,0.167%,,,
 TRUE,A2 195,Mars,Mars,Palkia,⭐⭐,1,,,,,0.042%,0.167%
-FALSE,A2 196,Yanmega ex,Yanmega ex,Dialga,⭐⭐,0,,0.042%,0.167%,,,
+TRUE,A2 196,Yanmega ex,Yanmega ex,Dialga,⭐⭐,1,,0.042%,0.167%,,,
 TRUE,A2 197,Infernape ex,Simiabraz ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 TRUE,A2 198,Pachirisu ex,Pachirisu ex,Dialga,⭐⭐,1,,0.042%,0.167%,,,
 TRUE,A2 199,Mismagius ex,Magirêve ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%

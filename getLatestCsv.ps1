@@ -1,19 +1,19 @@
-$DOCUMENT_ID = "1Qg3NHmUFMPQ1QL9XoViZMtpw1kJ0NWk80SXACUhY0dE"
-$PAGE_IDS = @('1184276413', '1894219008', '48450441', '83947440')
+$documentId = "1Qg3NHmUFMPQ1QL9XoViZMtpw1kJ0NWk80SXACUhY0dE"
+$pageIds = @('1184276413', '1894219008', '48450441', '83947440')
 
 
 
-$OUTPUT_FOLDER = "config"
-Foreach ($PAGE_ID in $PAGE_IDS) {
-    $CSV_URL = "https://docs.google.com/spreadsheets/d/$DOCUMENT_ID/export?format=csv&gid=$PAGE_ID"
+$outputFolder = "config"
+Foreach ($pageId in $pageIds) {
+    $URL = "https://docs.google.com/spreadsheets/d/$documentId/export?format=csv&gid=$pageId"
 
-    $OUTPUT_FILE = "$OUTPUT_FOLDER\$PAGE_ID.csv"
+    $outputFile = "$outputFolder\$pageId.csv"
 
     try {
-        Invoke-WebRequest -Uri $CSV_URL -OutFile $OUTPUT_FILE
-        Write-Host "Downloaded: $OUTPUT_FILE"
+        Invoke-WebRequest -Uri $URL -OutFile $outputFile
+        Write-Host "Downloaded: $outputFile"
     } catch {
-        Write-Host "Failed to download CSV for Page ID: $PAGE_ID" -ForegroundColor Red
+        Write-Host "Failed to download CSV for Page ID: $pageId" -ForegroundColor Red
     }
 }
 
