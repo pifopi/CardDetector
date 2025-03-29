@@ -1,6 +1,6 @@
-🃏,89 / 96,,,,,⬆️,,,
+🃏,90 / 96,,,,,⬆️,,,
 💠,73 / 75,,,,,Show/hide card pull rates,,,
-⭐,15 / 20,,,,,,Any A1a,,
+⭐,16 / 20,,,,,,Any A1a,,
 👑,1 / 1,,,,,,Arceus,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card
 TRUE,A2a 001,Heracross,Scarhino,Arceus,💠💠,8,,3.462%,2.308%
@@ -95,7 +95,7 @@ TRUE,A2a 089,Barry,René ,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 090,Adaman,Adamantin ,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 091,Leafeon ex,Phyllali ex,Arceus,⭐⭐,2,,0.038%,0.154%
 TRUE,A2a 092,Glaceon ex,Givrali ex,Arceus,⭐⭐,1,,0.038%,0.154%
-FALSE,A2a 093,Garchomp ex,Carchacrok ex,Arceus,⭐⭐,0,,0.038%,0.154%
+TRUE,A2a 093,Garchomp ex,Carchacrok ex,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 094,Probopass ex,Tarinorme ex,Arceus,⭐⭐,1,,0.038%,0.154%
 FALSE,A2a 095,Arceus ex,Arceus ex,Arceus,⭐⭐⭐,0,,0.222%,0.888%
 TRUE,A2a 096,Arceus ex,Arceus ex,Arceus,👑,1,,0.040%,0.160%

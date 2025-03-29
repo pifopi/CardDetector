@@ -1,6 +1,6 @@
-🃏,273 / 286,,,,,⬆️,,,,,,,,,
+🃏,274 / 286,,,,,⬆️,,,,,,,,,
 💠,226 / 226,,,,,Show/hide card pull rates,,,,,,,,,
-⭐,47 / 57,,,,,,Any A1,,,,,,,,
+⭐,48 / 57,,,,,,Any A1,,,,,,,,
 👑,0 / 3,,,,,,Mewtwo,,,Pikachu,,,Charizard,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card
 TRUE,A1 001,Bulbasaur,Bulbizarre,Mewtwo,💠,17,2.000%,,,,,,,,
@@ -263,7 +263,7 @@ TRUE,A1 257,Starmie ex,Staross ex,Charizard,⭐⭐,2,,,,,,,,0.050%,0.200%
 TRUE,A1 258,Articuno ex,Artikodin ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 TRUE,A1 259,Pikachu ex,Pikachu ex,Pikachu,⭐⭐,1,,,,,0.050%,0.200%,,,
 TRUE,A1 260,Zapdos ex,Électhor ex,Pikachu,⭐⭐,2,,,,,0.050%,0.200%,,,
-FALSE,A1 261,Gengar ex,Ectoplasma ex,Mewtwo,⭐⭐,0,,0.056%,0.222%,,,,,,
+TRUE,A1 261,Gengar ex,Ectoplasma ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 TRUE,A1 262,Mewtwo ex,Mewtwo ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 TRUE,A1 263,Machamp ex,Mackogneur ex,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
 FALSE,A1 264,Marowak ex,Ossatueur ex,Mewtwo,⭐⭐,0,,0.056%,0.222%,,,,,,
