@@ -1,6 +1,6 @@
-🃏,25 / 111,,,,,⬆️,,,
+🃏,27 / 111,,,,,⬆️,,,
 💠,22 / 72,,,,,Show/hide card pull rates,,,
-⭐,2 / 24,,,,,,Any A1a,,
+⭐,4 / 24,,,,,,Any A1a,,
 👑,0 / 1,,,,,,Shinies,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card
 FALSE,A2b 001,Weedle,Aspicot,Shinies,💠,0,3.125%,,
@@ -83,8 +83,8 @@ FALSE,A2b 077,Gholdengo,Gromago,Shinies,⭐,0,,0.429%,1.715%
 FALSE,A2b 078,Wigglytuff,Grodoudou,Shinies,⭐,0,,0.429%,1.715%
 FALSE,A2b 079,Beedrill ex,Dardargnan ex,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 080,Charizard ex,Dracaufeu ex,Shinies,⭐⭐,0,,0.029%,0.118%
-FALSE,A2b 081,Wugtrio ex,Triopikeau ex,Shinies,⭐⭐,0,,0.029%,0.118%
-FALSE,A2b 082,Pikachu ex,Pikachu ex,Shinies,⭐⭐,0,,0.029%,0.118%
+TRUE,A2b 081,Wugtrio ex,Triopikeau ex,Shinies,⭐⭐,1,,0.029%,0.118%
+TRUE,A2b 082,Pikachu ex,Pikachu ex,Shinies,⭐⭐,1,,0.029%,0.118%
 FALSE,A2b 083,Giratina ex,Giratina ex,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 084,Lucario ex,Lucario ex,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 085,Paldean Clodsire ex,Terraiste de Paldea ex,Shinies,⭐⭐,0,,0.029%,0.118%
@@ -94,9 +94,9 @@ FALSE,A2b 088,Iono,Mashynn,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 089,Pokémon Center Lady,Dame du Centre Pokémon,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 090,Red,Red,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 091,Team Rocket Grunt,Sbire de la Team Rocket,Shinies,⭐⭐,0,,0.029%,0.118%
-TRUE,A2b 092,Pikachu ex,Pikachu ex,Shinies,⭐⭐,1,,0.029%,0.118%
+FALSE,A2b 092,Pikachu ex,Pikachu ex,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 093,Paldean Clodsire ex,Terraiste de Paldea ex,Shinies,⭐⭐,0,,0.029%,0.118%
-FALSE,A2b 094,Tinkaton ex,Forgelina ex,Shinies,⭐⭐,0,,0.029%,0.118%
+TRUE,A2b 094,Tinkaton ex,Forgelina ex,Shinies,⭐⭐,1,,0.029%,0.118%
 FALSE,A2b 095,Bibarel ex,Castorno ex,Shinies,⭐⭐,0,,0.029%,0.118%
 FALSE,A2b 096,Giratina ex,Giratina ex,Shinies,⭐⭐⭐,0,,0.222%,0.888%
 FALSE,A2b 097,Weedle,Aspicot,Shinies,✨,0,,0.071%,0.286%
