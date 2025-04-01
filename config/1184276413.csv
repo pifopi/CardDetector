@@ -1,6 +1,6 @@
-🃏,274 / 286,,,,,⬆️,,,,,,,,,
+🃏,276 / 286,,,,,⬆️,,,,,,,,,
 💠,226 / 226,,,,,Show/hide card pull rates,,,,,,,,,
-⭐,48 / 57,,,,,,Any A1,,,,,,,,
+⭐,50 / 57,,,,,,Any A1,,,,,,,,
 👑,0 / 3,,,,,,Mewtwo,,,Pikachu,,,Charizard,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card
 TRUE,A1 001,Bulbasaur,Bulbizarre,Mewtwo,💠,17,2.000%,,,,,,,,
@@ -22,12 +22,12 @@ TRUE,A1 016,Venonat,Mimitoss,Mewtwo,💠,5,2.000%,,,,,,,,
 TRUE,A1 017,Venomoth,Aéromite,Mewtwo,💠💠,5,,2.571%,1.714%,,,,,,
 TRUE,A1 018,Bellsprout,Chétiflor,Charizard,💠,14,,,,,,,2.000%,,
 TRUE,A1 019,Weepinbell,Boustiflor,Charizard,💠💠,3,,,,,,,,2.571%,1.714%
-TRUE,A1 020,Victreebel,Empiflor,Charizard,💠💠💠,1,,,,,,,,0.357%,1.429%
+TRUE,A1 020,Victreebel,Empiflor,Charizard,💠💠💠,2,,,,,,,,0.357%,1.429%
 TRUE,A1 021,Exeggcute,Noeunoeuf,Charizard,💠,9,,,,,,,2.000%,,
 TRUE,A1 022,Exeggutor,Noadkoko,Charizard,💠💠💠,2,,,,,,,,0.357%,1.429%
 TRUE,A1 023,Exeggutor ex,Noadkoko ex,Charizard,💠💠💠💠,3,,,,,,,,0.333%,1.333%
 TRUE,A1 024,Tangela,Saquedeneu,Charizard,💠,6,,,,,,,2.000%,,
-TRUE,A1 025,Scyther,Insécateur,Mewtwo,💠,4,2.000%,,,,,,,,
+TRUE,A1 025,Scyther,Insécateur,Mewtwo,💠,14,2.000%,,,,,,,,
 TRUE,A1 026,Pinsir,Scarabrute,Any A1,💠💠,23,,2.571%,1.714%,,2.571%,1.714%,,2.571%,1.714%
 TRUE,A1 027,Cottonee,Doudouvet,Any A1,💠,25,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 028,Whimsicott,Farfaduvet,Any A1,💠💠,15,,2.571%,1.714%,,2.571%,1.714%,,2.571%,1.714%
@@ -48,7 +48,7 @@ TRUE,A1 042,Ponyta,Ponyta,Any A1,💠,27,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 043,Rapidash,Galopa,Any A1,💠💠,14,,2.571%,1.714%,,2.571%,1.714%,,2.571%,1.714%
 TRUE,A1 044,Magmar,Magmar,Charizard,💠,16,,,,,,,2.000%,,
 TRUE,A1 045,Flareon,Pyroli,Charizard,💠💠💠,3,,,,,,,,0.357%,1.429%
-TRUE,A1 046,Moltres,Sulfura,Charizard,💠💠💠,1,,,,,,,,0.357%,1.429%
+TRUE,A1 046,Moltres,Sulfura,Charizard,💠💠💠,2,,,,,,,,0.357%,1.429%
 TRUE,A1 047,Moltres ex,Sulfura ex,Charizard,💠💠💠💠,3,,,,,,,,0.333%,1.333%
 TRUE,A1 048,Heatmor,Aflamanoir,Any A1,💠,36,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 049,Salandit,Tritox,Mewtwo,💠,2,2.000%,,,,,,,,
@@ -130,7 +130,7 @@ TRUE,A1 124,Drowzee,Soporifik,Pikachu,💠,5,,,,2.000%,,,,,
 TRUE,A1 125,Hypno,Hypnomade,Pikachu,💠💠💠,3,,,,,0.357%,1.429%,,,
 TRUE,A1 126,Mr. Mime,M. Mime,Mewtwo,💠💠,2,,2.571%,1.714%,,,,,,
 TRUE,A1 127,Jynx,Lippoutou,Mewtwo,💠,5,2.000%,,,,,,,,
-TRUE,A1 128,Mewtwo,Mewtwo,Mewtwo,💠💠💠,1,,0.357%,1.429%,,,,,,
+TRUE,A1 128,Mewtwo,Mewtwo,Mewtwo,💠💠💠,2,,0.357%,1.429%,,,,,,
 TRUE,A1 129,Mewtwo ex,Mewtwo ex,Mewtwo,💠💠💠💠,3,,0.333%,1.333%,,,,,,
 TRUE,A1 130,Ralts,Tarsal,Mewtwo,💠,14,2.000%,,,,,,,,
 TRUE,A1 131,Kirlia,Kirlia,Mewtwo,💠💠,5,,2.571%,1.714%,,,,,,
@@ -155,7 +155,7 @@ TRUE,A1 149,Golem,Grolem,Pikachu,💠💠💠,2,,,,,0.357%,1.429%,,,
 TRUE,A1 150,Onix,Onix,Pikachu,💠💠,8,,,,,2.571%,1.714%,,,
 TRUE,A1 151,Cubone,Osselait,Mewtwo,💠,5,2.000%,,,,,,,,
 TRUE,A1 152,Marowak,Ossatueur,Mewtwo,💠💠,7,,2.571%,1.714%,,,,,,
-TRUE,A1 153,Marowak ex,Ossatueur ex,Mewtwo,💠💠💠💠,1,,0.333%,1.333%,,,,,,
+TRUE,A1 153,Marowak ex,Ossatueur ex,Mewtwo,💠💠💠💠,2,,0.333%,1.333%,,,,,,
 TRUE,A1 154,Hitmonlee,Kicklee,Mewtwo,💠,4,2.000%,,,,,,,,
 TRUE,A1 155,Hitmonchan,Tygnon,Charizard,💠,7,,,,,,,2.000%,,
 TRUE,A1 156,Rhyhorn,Rhinocorne,Mewtwo,💠,4,2.000%,,,,,,,,
@@ -170,14 +170,14 @@ TRUE,A1 164,Ekans,Abo,Any A1,💠,31,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 165,Arbok,Arbok,Any A1,💠💠,13,,2.571%,1.714%,,2.571%,1.714%,,2.571%,1.714%
 TRUE,A1 166,Nidoran♀,Nidoran♀,Pikachu,💠,5,,,,2.000%,,,,,
 TRUE,A1 167,Nidorina,Nidorina,Pikachu,💠💠,6,,,,,2.571%,1.714%,,,
-TRUE,A1 168,Nidoqueen,Nidoqueen,Pikachu,💠💠💠,1,,,,,0.357%,1.429%,,,
+TRUE,A1 168,Nidoqueen,Nidoqueen,Pikachu,💠💠💠,2,,,,,0.357%,1.429%,,,
 TRUE,A1 169,Nidoran♂,Nidoran♂,Pikachu,💠,3,,,,2.000%,,,,,
 TRUE,A1 170,Nidorino,Nidorino,Pikachu,💠💠,5,,,,,2.571%,1.714%,,,
 TRUE,A1 171,Nidoking,Nidoking,Pikachu,💠💠💠,3,,,,,0.357%,1.429%,,,
 TRUE,A1 172,Zubat,Nosferapti,Mewtwo,💠,5,2.000%,,,,,,,,
 TRUE,A1 173,Golbat,Nosferalto,Mewtwo,💠💠,3,,2.571%,1.714%,,,,,,
 TRUE,A1 174,Grimer,Tadmorv,Mewtwo,💠,5,2.000%,,,,,,,,
-TRUE,A1 175,Muk,Grotadmorv,Mewtwo,💠💠💠,1,,0.357%,1.429%,,,,,,
+TRUE,A1 175,Muk,Grotadmorv,Mewtwo,💠💠💠,2,,0.357%,1.429%,,,,,,
 TRUE,A1 176,Koffing,Smogo,Mewtwo,💠,10,2.000%,,,,,,,,
 TRUE,A1 177,Weezing,Smogogo,Mewtwo,💠💠💠,2,,0.357%,1.429%,,,,,,
 TRUE,A1 178,Mawile,Mysdibule,Charizard,💠,8,,,,,,,2.000%,,
@@ -190,7 +190,7 @@ TRUE,A1 184,Dragonair,Draco,Mewtwo,💠💠,5,,2.571%,1.714%,,,,,,
 TRUE,A1 185,Dragonite,Dracolosse,Mewtwo,💠💠💠,2,,0.357%,1.429%,,,,,,
 TRUE,A1 186,Pidgey,Roucool,Mewtwo,💠,12,2.000%,,,,,,,,
 TRUE,A1 187,Pidgeotto,Roucoups,Mewtwo,💠,3,2.000%,,,,,,,,
-TRUE,A1 188,Pidgeot,Roucarnage,Mewtwo,💠💠💠,1,,0.357%,1.429%,,,,,,
+TRUE,A1 188,Pidgeot,Roucarnage,Mewtwo,💠💠💠,2,,0.357%,1.429%,,,,,,
 TRUE,A1 189,Rattata,Rattata,Any A1,💠,22,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 190,Raticate,Rattatac,Any A1,💠,20,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 191,Spearow,Piafabec,Charizard,💠,11,,,,,,,2.000%,,
@@ -212,7 +212,7 @@ TRUE,A1 206,Eevee,Évoli,Charizard,💠,5,,,,,,,2.000%,,
 TRUE,A1 207,Eevee,Évoli,Mewtwo,💠,6,2.000%,,,,,,,,
 TRUE,A1 208,Eevee,Évoli,Pikachu,💠,7,,,,2.000%,,,,,
 TRUE,A1 209,Porygon,Porygon,Mewtwo,💠💠,2,,2.571%,1.714%,,,,,,
-TRUE,A1 210,Aerodactyl,Ptéra,Mewtwo,💠💠💠,1,,0.357%,1.429%,,,,,,
+TRUE,A1 210,Aerodactyl,Ptéra,Mewtwo,💠💠💠,2,,0.357%,1.429%,,,,,,
 TRUE,A1 211,Snorlax,Ronflex,Pikachu,💠💠💠,3,,,,,0.357%,1.429%,,,
 TRUE,A1 212,Minccino,Chinchidou,Any A1,💠,20,2.000%,,,2.000%,,,2.000%,,
 TRUE,A1 213,Cinccino,Pashmilla,Any A1,💠💠,18,,2.571%,1.714%,,2.571%,1.714%,,2.571%,1.714%
@@ -266,7 +266,7 @@ TRUE,A1 260,Zapdos ex,Électhor ex,Pikachu,⭐⭐,2,,,,,0.050%,0.200%,,,
 TRUE,A1 261,Gengar ex,Ectoplasma ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 TRUE,A1 262,Mewtwo ex,Mewtwo ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 TRUE,A1 263,Machamp ex,Mackogneur ex,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
-FALSE,A1 264,Marowak ex,Ossatueur ex,Mewtwo,⭐⭐,0,,0.056%,0.222%,,,,,,
+TRUE,A1 264,Marowak ex,Ossatueur ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 FALSE,A1 265,Wigglytuff ex,Grodoudou ex,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
 TRUE,A1 266,Erika,Erika,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
 FALSE,A1 267,Misty,Ondine,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
@@ -281,7 +281,7 @@ TRUE,A1 275,Articuno ex,Artikodin ex,Mewtwo,⭐⭐,2,,0.056%,0.222%,,,,,,
 TRUE,A1 276,Zapdos ex,Électhor ex,Pikachu,⭐⭐,1,,,,,0.050%,0.200%,,,
 TRUE,A1 277,Gengar ex,Ectoplasma ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 TRUE,A1 278,Machamp ex,Mackogneur ex,Charizard,⭐⭐,2,,,,,,,,0.050%,0.200%
-FALSE,A1 279,Wigglytuff ex,Grodoudou ex,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
+TRUE,A1 279,Wigglytuff ex,Grodoudou ex,Pikachu,⭐⭐,1,,,,,0.050%,0.200%,,,
 TRUE,A1 280,Charizard ex,Dracaufeu ex,Charizard,⭐⭐⭐,1,,,,,,,,0.222%,0.888%
 TRUE,A1 281,Pikachu ex,Pikachu ex,Pikachu,⭐⭐⭐,2,,,,,0.222%,0.888%,,,
 TRUE,A1 282,Mewtwo ex,Mewtwo ex,Mewtwo,⭐⭐⭐,1,,0.222%,0.888%,,,,,,
