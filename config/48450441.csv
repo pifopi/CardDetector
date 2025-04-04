@@ -1,6 +1,6 @@
-🃏,187 / 207,,,,,⬆️,,,,,,
+🃏,194 / 207,,,,,⬆️,,,,,,
 💠,148 / 155,,,,,Show/hide card pull rates,,,,,,
-⭐,39 / 50,,,,,,Any A2,,,,,
+⭐,46 / 50,,,,,,Any A2,,,,,
 👑,0 / 2,,,,,,Dialga,,,Palkia,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card
 TRUE,A2 001,Oddish,Mystherbe,Any A2,💠,7,2.174%,,,2.273%,,
@@ -158,32 +158,32 @@ FALSE,A2 152,Cynthia,Cynthia,Palkia,💠💠,0,,,,,2.500%,1.667%
 TRUE,A2 153,Volkner,Tanguy,Dialga,💠💠,4,,2.647%,1.765%,,,
 TRUE,A2 154,Dawn,Aurore,Dialga,💠💠,6,,2.647%,1.765%,,,
 TRUE,A2 155,Mars,Mars,Palkia,💠💠,2,,,,,2.500%,1.667%
-FALSE,A2 156,Tangrowth,Bouldeneu,Dialga,⭐,0,,0.214%,0.857%,,,
+TRUE,A2 156,Tangrowth,Bouldeneu,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 157,Combee,Apitrini,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 158,Carnivine,Vortente,Palkia,⭐,2,,,,,0.214%,0.857%
 TRUE,A2 159,Shaymin,Shaymin,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 160,Mamoswine,Mammochon,Dialga,⭐,3,,0.214%,0.857%,,,
 TRUE,A2 161,Gastrodon,Tritosor,Palkia,⭐,1,,,,,0.214%,0.857%
 FALSE,A2 162,Manaphy,Manaphy,Palkia,⭐,0,,,,,0.214%,0.857%
-FALSE,A2 163,Shinx,Lixy,Dialga,⭐,0,,0.214%,0.857%,,,
+TRUE,A2 163,Shinx,Lixy,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 164,Rotom,Motisma,Palkia,⭐,1,,,,,0.214%,0.857%
-FALSE,A2 165,Drifloon,Baudrive,Dialga,⭐,0,,0.214%,0.857%,,,
+TRUE,A2 165,Drifloon,Baudrive,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 166,Mesprit,Créfollet,Dialga,⭐,3,,0.214%,0.857%,,,
 TRUE,A2 167,Giratina,Giratina,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 168,Cresselia,Cresselia,Palkia,⭐,2,,,,,0.214%,0.857%
 TRUE,A2 169,Rhyperior,Rhinastoc,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 170,Lucario,Lucario,Dialga,⭐,3,,0.214%,0.857%,,,
-FALSE,A2 171,Hippopotas,Hippopotas,Palkia,⭐,0,,,,,0.214%,0.857%
+TRUE,A2 171,Hippopotas,Hippopotas,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 172,Spiritomb,Spiritomb,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 173,Croagunk,Cradopaud,Dialga,⭐,3,,0.214%,0.857%,,,
 TRUE,A2 174,Heatran,Heatran,Dialga,⭐,2,,0.214%,0.857%,,,
 TRUE,A2 175,Garchomp,Carchacrok,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 176,Staraptor,Étouraptor,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 177,Bidoof,Keunotor,Dialga,⭐,3,,0.214%,0.857%,,,
-FALSE,A2 178,Glameow,Chaglam,Palkia,⭐,0,,,,,0.214%,0.857%
+TRUE,A2 178,Glameow,Chaglam,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 179,Regigigas,Regigigas,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 180,Yanmega ex,Yanmega ex,Dialga,⭐⭐,2,,0.042%,0.167%,,,
-FALSE,A2 181,Infernape ex,Simiabraz ex,Palkia,⭐⭐,0,,,,,0.042%,0.167%
+TRUE,A2 181,Infernape ex,Simiabraz ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 TRUE,A2 182,Palkia ex,Palkia ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 TRUE,A2 183,Pachirisu ex,Pachirisu ex,Dialga,⭐⭐,1,,0.042%,0.167%,,,
 TRUE,A2 184,Mismagius ex,Magirêve ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
@@ -205,7 +205,7 @@ TRUE,A2 199,Mismagius ex,Magirêve ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 TRUE,A2 200,Gallade ex,Gallame ex,Dialga,⭐⭐,1,,0.042%,0.167%,,,
 TRUE,A2 201,Weavile ex,Dimoret ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 TRUE,A2 202,Darkrai ex,Darkrai ex,Dialga,⭐⭐,1,,0.042%,0.167%,,,
-FALSE,A2 203,Lickilicky ex,Coudlangue ex,Palkia,⭐⭐,0,,,,,0.042%,0.167%
+TRUE,A2 203,Lickilicky ex,Coudlangue ex,Palkia,⭐⭐,1,,,,,0.042%,0.167%
 FALSE,A2 204,Palkia ex,Palkia ex,Palkia,⭐⭐⭐,0,,,,,0.222%,0.888%
 FALSE,A2 205,Dialga ex,Dialga ex,Dialga,⭐⭐⭐,0,,0.222%,0.888%,,,
 FALSE,A2 206,Palkia ex,Palkia ex,Any A2,👑,0,,0.020%,0.080%,,0.020%,0.080%

@@ -1,6 +1,6 @@
-🃏,91 / 96,,,,,⬆️,,,
+🃏,93 / 96,,,,,⬆️,,,
 💠,74 / 75,,,,,Show/hide card pull rates,,,
-⭐,16 / 20,,,,,,Any A1a,,
+⭐,18 / 20,,,,,,Any A1a,,
 👑,1 / 1,,,,,,Arceus,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card
 TRUE,A2a 001,Heracross,Scarhino,Arceus,💠💠,12,,3.462%,2.308%
@@ -81,7 +81,7 @@ TRUE,A2a 075,Adaman,Adamantin ,Arceus,💠💠,2,,3.462%,2.308%
 TRUE,A2a 076,Houndoom,Démolosse,Arceus,⭐,3,,0.429%,1.715%
 TRUE,A2a 077,Marill,Marill,Arceus,⭐,1,,0.429%,1.715%
 TRUE,A2a 078,Unown,Zarbi,Arceus,⭐,1,,0.429%,1.715%
-FALSE,A2a 079,Sudowoodo,Simularbre,Arceus,⭐,0,,0.429%,1.715%
+TRUE,A2a 079,Sudowoodo,Simularbre,Arceus,⭐,1,,0.429%,1.715%
 TRUE,A2a 080,Magnemite,Magnéti,Arceus,⭐,1,,0.429%,1.715%
 TRUE,A2a 081,Shaymin,Shaymin,Arceus,⭐,1,,0.429%,1.715%
 FALSE,A2a 082,Leafeon ex,Phyllali ex,Arceus,⭐⭐,0,,0.038%,0.154%
@@ -90,7 +90,7 @@ TRUE,A2a 084,Garchomp ex,Carchacrok ex,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 085,Probopass ex,Tarinorme ex,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 086,Arceus ex,Arceus ex,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 087,Irida,Nacchara ,Arceus,⭐⭐,1,,0.038%,0.154%
-FALSE,A2a 088,Celestic Town Elder,Doyenne de Célestia,Arceus,⭐⭐,0,,0.038%,0.154%
+TRUE,A2a 088,Celestic Town Elder,Doyenne de Célestia,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 089,Barry,René ,Arceus,⭐⭐,1,,0.038%,0.154%
 TRUE,A2a 090,Adaman,Adamantin ,Arceus,⭐⭐,2,,0.038%,0.154%
 TRUE,A2a 091,Leafeon ex,Phyllali ex,Arceus,⭐⭐,2,,0.038%,0.154%
