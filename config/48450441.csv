@@ -1,6 +1,6 @@
-🃏,194 / 207,,,,,⬆️,,,,,,
+🃏,195 / 207,,,,,⬆️,,,,,,
 💠,148 / 155,,,,,Show/hide card pull rates,,,,,,
-⭐,46 / 50,,,,,,Any A2,,,,,
+⭐,47 / 50,,,,,,Any A2,,,,,
 👑,0 / 2,,,,,,Dialga,,,Palkia,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card
 TRUE,A2 001,Oddish,Mystherbe,Any A2,💠,7,2.174%,,,2.273%,,
@@ -164,7 +164,7 @@ TRUE,A2 158,Carnivine,Vortente,Palkia,⭐,2,,,,,0.214%,0.857%
 TRUE,A2 159,Shaymin,Shaymin,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 160,Mamoswine,Mammochon,Dialga,⭐,3,,0.214%,0.857%,,,
 TRUE,A2 161,Gastrodon,Tritosor,Palkia,⭐,1,,,,,0.214%,0.857%
-FALSE,A2 162,Manaphy,Manaphy,Palkia,⭐,0,,,,,0.214%,0.857%
+TRUE,A2 162,Manaphy,Manaphy,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 163,Shinx,Lixy,Dialga,⭐,1,,0.214%,0.857%,,,
 TRUE,A2 164,Rotom,Motisma,Palkia,⭐,1,,,,,0.214%,0.857%
 TRUE,A2 165,Drifloon,Baudrive,Dialga,⭐,1,,0.214%,0.857%,,,
