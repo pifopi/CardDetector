@@ -1,5 +1,5 @@
-🃏,94 / 96,,,,,⬆️,,,
-💠,74 / 75,,,,,Show/hide card pull rates,,,
+🃏,95 / 96,,,,,⬆️,,,
+💠,75 / 75,,,,,Show/hide card pull rates,,,
 ⭐,19 / 20,,,,,,Any A1a,,
 👑,1 / 1,,,,,,Arceus,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card
@@ -25,7 +25,7 @@ TRUE,A2a 019,Froslass,Momartik,Arceus,💠💠,6,,3.462%,2.308%
 TRUE,A2a 020,Snover,Blizzi,Arceus,💠,11,3.226%,,
 TRUE,A2a 021,Abomasnow,Blizzaroi,Arceus,💠💠💠,2,,0.385%,1.538%
 TRUE,A2a 022,Glaceon ex,Givrali ex,Arceus,💠💠💠💠,3,,0.333%,1.333%
-FALSE,A2a 023,Origin Forme Palkia,Palkia Forme Originelle,Arceus,💠💠💠,0,,0.385%,1.538%
+TRUE,A2a 023,Origin Forme Palkia,Palkia Forme Originelle,Arceus,💠💠💠,1,,0.385%,1.538%
 TRUE,A2a 024,Phione,Phione,Arceus,💠💠,3,,3.462%,2.308%
 TRUE,A2a 025,Pikachu,Pikachu,Arceus,💠,8,3.226%,,
 TRUE,A2a 026,Raichu,Raichu,Arceus,💠💠💠,1,,0.385%,1.538%
@@ -78,7 +78,7 @@ TRUE,A2a 072,Irida,Nacchara ,Arceus,💠💠,8,,3.462%,2.308%
 TRUE,A2a 073,Celestic Town Elder,Doyenne de Célestia,Arceus,💠💠,5,,3.462%,2.308%
 TRUE,A2a 074,Barry,René ,Arceus,💠💠,1,,3.462%,2.308%
 TRUE,A2a 075,Adaman,Adamantin ,Arceus,💠💠,2,,3.462%,2.308%
-TRUE,A2a 076,Houndoom,Démolosse,Arceus,⭐,3,,0.429%,1.715%
+TRUE,A2a 076,Houndoom,Démolosse,Arceus,⭐,2,,0.429%,1.715%
 TRUE,A2a 077,Marill,Marill,Arceus,⭐,1,,0.429%,1.715%
 TRUE,A2a 078,Unown,Zarbi,Arceus,⭐,1,,0.429%,1.715%
 TRUE,A2a 079,Sudowoodo,Simularbre,Arceus,⭐,1,,0.429%,1.715%

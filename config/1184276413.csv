@@ -1,6 +1,6 @@
-🃏,277 / 286,,,,,⬆️,,,,,,,,,
+🃏,279 / 286,,,,,⬆️,,,,,,,,,
 💠,226 / 226,,,,,Show/hide card pull rates,,,,,,,,,
-⭐,51 / 57,,,,,,Any A1,,,,,,,,
+⭐,53 / 57,,,,,,Any A1,,,,,,,,
 👑,0 / 3,,,,,,Mewtwo,,,Pikachu,,,Charizard,,
 ☑️,Card ID,Card,Carte,Pack,Rarity,Copies,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card,1st – 3rd,4th card,5th card
 TRUE,A1 001,Bulbasaur,Bulbizarre,Mewtwo,💠,17,2.000%,,,,,,,,
@@ -269,13 +269,13 @@ TRUE,A1 263,Machamp ex,Mackogneur ex,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
 TRUE,A1 264,Marowak ex,Ossatueur ex,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 FALSE,A1 265,Wigglytuff ex,Grodoudou ex,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
 TRUE,A1 266,Erika,Erika,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
-FALSE,A1 267,Misty,Ondine,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
+TRUE,A1 267,Misty,Ondine,Pikachu,⭐⭐,1,,,,,0.050%,0.200%,,,
 TRUE,A1 268,Blaine,Auguste,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
 TRUE,A1 269,Koga,Koga,Mewtwo,⭐⭐,1,,0.056%,0.222%,,,,,,
 FALSE,A1 270,Giovanni,Giovanni,Mewtwo,⭐⭐,0,,0.056%,0.222%,,,,,,
 FALSE,A1 271,Brock,Pierre,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
 TRUE,A1 272,Sabrina,Morgane,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
-FALSE,A1 273,Lt. Surge,Major Bob,Pikachu,⭐⭐,0,,,,,0.050%,0.200%,,,
+TRUE,A1 273,Lt. Surge,Major Bob,Pikachu,⭐⭐,1,,,,,0.050%,0.200%,,,
 TRUE,A1 274,Moltres ex,Sulfura ex,Charizard,⭐⭐,1,,,,,,,,0.050%,0.200%
 TRUE,A1 275,Articuno ex,Artikodin ex,Mewtwo,⭐⭐,2,,0.056%,0.222%,,,,,,
 TRUE,A1 276,Zapdos ex,Électhor ex,Pikachu,⭐⭐,1,,,,,0.050%,0.200%,,,
